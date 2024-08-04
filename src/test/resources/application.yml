@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: mipmip-v2
+  datasource:
+    url: "jdbc:mysql://localhost:3306/pleyfair"
+    username: root
+    password: password
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+endato:
+  key: ${ENDATO_KEY:3b2f1792-2c0f-4072-936f-3d62c03a4545}
+  secret: ${ENDATO_SECRET:bfb7fc2a45f2445e8d3dd9a77b0c5873}
+  protocol: ${ENDATO_PROTOCOL:https}
+  host: ${ENDATO_HOST:devapi.endato.com}
+  port: ${ENDATO_PORT:443}
+  searchPath: ${ENDATO_SEARCH_PATH:/personsearch}
+  searchType: ${ENDATO_SEARCH_TYPE:Person}
+
+scheduler:
+  transactionCron: ${TRANSACTION_CRON:0 */5 * * * *}
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: local
+    datasource:
+      url: "jdbc:mysql://localhost:3306/pleyfair"
+      username: root
+      password: password
+      driver-class-name: com.mysql.jdbc.Driver
+
+    jpa:
+      show-sql: true
+
+server:
+  port: 8080
