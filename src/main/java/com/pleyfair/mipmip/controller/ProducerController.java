@@ -28,7 +28,6 @@ import java.util.List;
 @Tag(name = "PleyFair-Router")
 @Slf4j
 public class ProducerController {
-
     private final Tmc4uService tmc4uService;
 
     public ProducerController(Tmc4uService tmc4uService) {
@@ -54,7 +53,6 @@ public class ProducerController {
     ) {
         log.info("Received new Tmc4u leads: {}", tmc4uPersonList);
         tmc4uService.processBatch(tmc4uPersonList);
-
         return ResponseEntity.ok("Leads accepted. Everything is okay!");
     }
 }
