@@ -11,8 +11,8 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
 
 endato:
-  key: ${ENDATO_KEY:3b2f1792-2c0f-4072-936f-3d62c03a4545}
-  secret: ${ENDATO_SECRET:bfb7fc2a45f2445e8d3dd9a77b0c5873}
+  key: ${ENDATO_KEY}
+  secret: ${ENDATO_SECRET}
   protocol: ${ENDATO_PROTOCOL:https}
   host: ${ENDATO_HOST:devapi.endato.com}
   port: ${ENDATO_PORT:443}
