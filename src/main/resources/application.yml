@@ -6,8 +6,8 @@ spring:
       ddl-auto: update
   datasource:
     url: "jdbc:mysql://localhost:3306/pleyfair"
-    username: root
-    password: password
+    username: <username>
+    password: <password>
     driver-class-name: com.mysql.jdbc.Driver
 
 endato:
@@ -30,8 +30,8 @@ spring:
       on-profile: local
     datasource:
       url: "jdbc:mysql://localhost:3306/pleyfair"
-      username: root
-      password: password
+      username: <username>
+      password: <password>
       driver-class-name: com.mysql.jdbc.Driver
   jpa:
     show-sql: true
